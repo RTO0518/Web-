@@ -1,87 +1,177 @@
 const projects = [
   {
-    title: "ÖÇÄÜÖªÊ¶¿âÎÊ´ğÏµÍ³",
-    subtitle: "RAG ¡¤ AI ¡¤ È«Õ»¿ª·¢",
-    desc: "»ùÓÚ¼ìË÷ÔöÇ¿Éú³ÉµÄÆóÒµÎÄµµÖÇÄÜÎÊ´ğÏµÍ³£¬Ö§³Ö×ÔÈ»ÓïÑÔÌáÎÊÓë´ğ°¸À´Ô´×·Ëİ¡£ÏòÁ¿¼ìË÷ÕÙ»Ø Top-3 Ïà¹ØÆ¬¶Î£¬´ğ°¸×¼È·ÂÊ´ï 85%+¡£",
-    tags: ["LangChain", "Chroma", "ÖÇÆ×GLM", "Python"],
+    title: "æ™ºèƒ½çŸ¥è¯†åº“é—®ç­”ç³»ç»Ÿ",
+    subtitle: "RAG Â· AI Â· å…¨æ ˆå¼€å‘",
+    desc: "åŸºäºæ£€ç´¢å¢å¼ºç”Ÿæˆçš„ä¼ä¸šæ–‡æ¡£æ™ºèƒ½é—®ç­”ç³»ç»Ÿï¼Œæ”¯æŒè‡ªç„¶è¯­è¨€æé—®ä¸ç­”æ¡ˆæ¥æºè¿½æº¯ã€‚å‘é‡æ£€ç´¢å¬å› Top-3 ç›¸å…³ç‰‡æ®µï¼Œç­”æ¡ˆå‡†ç¡®ç‡è¾¾ 85%+ã€‚",
+    tags: ["LangChain", "Chroma", "æ™ºè°±GLM", "Python"],
     link: "https://github.com/RTO0518/ai_research_assistant",
-    gradient: "linear-gradient(135deg, #1a1a3e, #2d1b5e)",
+    image: "01",
+    icon: "\u{1F4DA}",
   },
   {
-    title: "MiniCode ±à³ÌÖúÊÖ",
-    subtitle: "AI Agent ¡¤ ÖÕ¶Ë¹¤¾ß",
-    desc: "ÇáÁ¿¼¶ÖÕ¶Ë AI ±à³Ì Agent£¬»ùÓÚ asyncio ÊÂ¼şÇı¶¯ÊµÏÖ¶à²½¹¤¾ßµ÷ÓÃ±Õ»·£¬Ö§³Ö MCP Ğ­ÒéÀ©Õ¹Óë 200+ ÂÖ³¤¶Ô»°ÉÏÏÂÎÄ¹ÜÀí¡£",
+    title: "MiniCode ç¼–ç¨‹åŠ©æ‰‹",
+    subtitle: "AI Agent Â· ç»ˆç«¯å·¥å…·",
+    desc: "è½»é‡çº§ç»ˆç«¯ AI ç¼–ç¨‹ Agentï¼ŒåŸºäº asyncio äº‹ä»¶é©±åŠ¨å®ç°å¤šæ­¥å·¥å…·è°ƒç”¨é—­ç¯ï¼Œæ”¯æŒ MCP åè®®æ‰©å±•ä¸ 200+ è½®é•¿å¯¹è¯ä¸Šä¸‹æ–‡ç®¡ç†ã€‚",
     tags: ["Python", "asyncio", "MCP", "TUI"],
     link: "#",
-    gradient: "linear-gradient(135deg, #0f2922, #1a3a30)",
-  },
-  {
-    title: "AI Æ·ÅÆÊÓ¾õÏµÍ³",
-    subtitle: "Æ·ÅÆÉè¼Æ ¡¤ ÊÓ¾õÊ¶±ğ",
-    desc: "½áºÏ Midjourney / DALL¡¤E ÓëÉè¼ÆÏµÍ³·½·¨ÂÛ£¬Îª¶à¸öÆ·ÅÆÍê³É´Ó LOGO¡¢É«²ÊÌåÏµµ½ÍêÕû UI Kit µÄÊÓ¾õÊ¶±ğÏµÍ³Éè¼Æ¡£",
-    tags: ["AI Éú³É", "Æ·ÅÆÉè¼Æ", "UI/UX", "Figma"],
-    link: "#",
-    gradient: "linear-gradient(135deg, #2a1a1a, #3e1a2e)",
+    image: "02",
+    icon: "\u{2328}",
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section reveal">
       <div className="container">
-        <p className="section-subtitle" style={{marginBottom:"12px"}}>SELECTED WORKS</p>
-        <h2 className="section-title" style={{marginBottom:"60px"}}>¾«Ñ¡ÏîÄ¿</h2>
+        <p className="section-subtitle" style={{ marginBottom: "12px" }}>
+          SELECTED WORKS
+        </p>
+        <h2 className="section-title" style={{ marginBottom: "60px" }}>
+          ç²¾é€‰é¡¹ç›®
+        </h2>
 
-        <div style={{display:"flex", flexDirection:"column", gap:"40px"}}>
+        <div style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
           {projects.map((p, i) => (
-            <div key={i} style={{
-              display:"grid", gridTemplateColumns:"1.2fr 1fr", gap:"60px",
-              background:"var(--surface)", borderRadius:"24px", overflow:"hidden",
-              border:"1px solid var(--border)", minHeight:"400px"
-            }}>
-              {/* Project image area */}
-              <div style={{
-                background: p.gradient, minHeight:"400px", height:"100%",
-                display:"flex", alignItems:"center", justifyContent:"center",
-                position:"relative", overflow:"hidden"
-              }}>
-                <div style={{
-                  position:"absolute", inset:0, opacity:0.05,
-                  backgroundImage: "radial-gradient(circle at 30% 50%, #fff 0%, transparent 50%)",
-                }} />
-                <div style={{textAlign:"center", position:"relative", zIndex:1}}>
-                  <div style={{fontSize:"48px", marginBottom:"8px"}}>??</div>
-                  <div style={{fontSize:"13px", color:"rgba(255,255,255,0.5)", letterSpacing:"2px"}}>
-                    PROJECT 0{i + 1}
+            <div
+              key={i}
+              className="project-card card-hover gradient-border"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "1.2fr 1fr",
+                gap: "60px",
+                background: "var(--surface)",
+                borderRadius: "24px",
+                overflow: "hidden",
+                border: "1px solid var(--border)",
+                minHeight: "400px",
+                position: "relative",
+              }}
+            >
+              <div
+                style={{
+                  background: `linear-gradient(135deg, var(--surface2), var(--border))`,
+                  minHeight: "400px",
+                  height: "100%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  position: "relative",
+                  overflow: "hidden",
+                }}
+              >
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: 0,
+                    background:
+                      "radial-gradient(circle at 30% 40%, rgba(124,108,255,0.06) 0%, transparent 60%)",
+                    pointerEvents: "none",
+                  }}
+                />
+                <div style={{ textAlign: "center", position: "relative", zIndex: 1 }}>
+                  <div style={{ fontSize: "56px", marginBottom: "12px" }}>{p.icon}</div>
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      color: "rgba(255,255,255,0.4)",
+                      letterSpacing: "3px",
+                      fontWeight: 500,
+                    }}
+                  >
+                    PROJECT {p.image}
                   </div>
                 </div>
               </div>
 
-              {/* Project info */}
-              <div style={{padding:"48px 48px 48px 0", display:"flex", flexDirection:"column", justifyContent:"center"}}>
-                <p style={{fontSize:"13px", color:"var(--accent)", letterSpacing:"2px", marginBottom:"12px"}}>
+              <div
+                style={{
+                  padding: "48px 48px 48px 0",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: "13px",
+                    color: "var(--accent)",
+                    letterSpacing: "2px",
+                    marginBottom: "12px",
+                    fontWeight: 500,
+                  }}
+                >
                   {p.subtitle}
                 </p>
-                <h3 style={{fontSize:"28px", fontWeight:700, marginBottom:"16px", letterSpacing:"-0.02em"}}>
+                <h3
+                  style={{
+                    fontSize: "28px",
+                    fontWeight: 700,
+                    marginBottom: "16px",
+                    letterSpacing: "-0.02em",
+                  }}
+                >
                   {p.title}
                 </h3>
-                <p style={{fontSize:"14px", color:"var(--text2)", lineHeight:1.8, marginBottom:"24px"}}>
+                <p
+                  style={{
+                    fontSize: "14px",
+                    color: "var(--text2)",
+                    lineHeight: 1.8,
+                    marginBottom: "24px",
+                  }}
+                >
                   {p.desc}
                 </p>
-                <div style={{display:"flex", flexWrap:"wrap", gap:"8px", marginBottom:"28px"}}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "8px",
+                    marginBottom: "28px",
+                  }}
+                >
                   {p.tags.map((t, j) => (
-                    <span key={j} style={{
-                      background:"var(--surface2)", color:"var(--text2)", padding:"4px 14px",
-                      borderRadius:"6px", fontSize:"12px", border:"1px solid var(--border)"
-                    }}>{t}</span>
+                    <span
+                      key={j}
+                      style={{
+                        background: "var(--surface2)",
+                        color: "var(--text2)",
+                        padding: "5px 14px",
+                        borderRadius: "8px",
+                        fontSize: "12px",
+                        border: "1px solid var(--border)",
+                      }}
+                    >
+                      {t}
+                    </span>
                   ))}
                 </div>
-                <a href={p.link} target="_blank" rel="noreferrer" style={{
-                  color:"var(--accent)", textDecoration:"none", fontSize:"14px", fontWeight:500,
-                  display:"inline-flex", alignItems:"center", gap:"6px"
-                }}>
-                  ²é¿´ÏêÇé ¡ú
-                </a>
+                {p.link !== "#" && (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-link"
+                    style={{
+                      color: "var(--accent)",
+                      textDecoration: "none",
+                      fontSize: "14px",
+                      fontWeight: 500,
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "6px",
+                      transition: "gap 0.3s, color 0.3s",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.gap = "12px";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.gap = "6px";
+                    }}
+                  >
+                    æŸ¥çœ‹è¯¦æƒ… &rarr;
+                  </a>
+                )}
               </div>
             </div>
           ))}
